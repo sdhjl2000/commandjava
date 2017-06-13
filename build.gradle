@@ -1,0 +1,39 @@
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+
+repositories {
+    maven { url 'http://nexus.dui88.com:8081/nexus/content/groups/public/' }
+    maven { url 'http://nexus.dui88.com:8081/nexus/content/repositories/snapshots' }
+}
+
+
+mainClassName = "com.example.Main"
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+        resources {
+            srcDir 'src/main/resources'
+        }
+    }
+
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.eclipse.che.examples.HelloWorld'
+    }
+}
+dependencies {
+    compile('org.apache.curator:curator-framework:2.12.0')
+    compile group: 'org.apache.curator', name: 'curator-recipes', version: '2.12.0'
+}
