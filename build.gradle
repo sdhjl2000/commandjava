@@ -11,6 +11,7 @@ sourceCompatibility = 1.8
 repositories {
     maven { url 'http://nexus.dui88.com:8081/nexus/content/groups/public/' }
     maven { url 'http://nexus.dui88.com:8081/nexus/content/repositories/snapshots' }
+
 }
 
 
