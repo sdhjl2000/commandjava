@@ -22,7 +22,6 @@ public class Main {
         System.out.print("----- get");
         Thread.sleep(10000);
         System.out.print("----- after sleep");
-        System.out.print("----- after sleep");
         System.out.print(interProcessMutex.isAcquiredInThisProcess());
     }
 
