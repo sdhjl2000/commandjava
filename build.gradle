@@ -36,4 +36,8 @@ jar {
 dependencies {
     compile('org.apache.curator:curator-framework:2.12.0')
     compile group: 'org.apache.curator', name: 'curator-recipes', version: '2.12.0'
+    compile 'org.slf4j:log4j-over-slf4j:1.7.5'
+    compile 'org.slf4j:slf4j-api:1.7.5'
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.5'
+
 }
